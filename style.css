@@ -25,10 +25,7 @@
 }
 
 body {
-  /* 
-  tuttp questo puo essere scritto anche nella maniera corta ossia 
-  background: (background-color)(background-image)(background-repeat)(background-position)(background-size)
-  */
+  height: 100vh;
   background: var(--bg-url) no-repeat top center/cover;
   transition: background 0.5s ease;
 }
@@ -38,7 +35,8 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: 56px auto 0;
   padding: 0 24px;
 }
@@ -145,4 +143,15 @@ footer {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
+}
+/*------------------
+  Responsive
+--------------------*/
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
